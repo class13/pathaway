@@ -26,4 +26,15 @@ public class Point {
     return y.intValue();
   }
 
+  @Override
+  public boolean equals(Object obj) {
+    final Point p;
+    if (obj instanceof Point) {
+      p = (Point) obj;
+    } else {
+      return false;
+    }
+    return p.x.equals(this.x) && p.y.equals(y);
+  }
+
 }
